@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 const baseText = TextStyle(
-    color: Colors.black,
-    fontFamily: "Poppins",
-    overflow: TextOverflow.ellipsis);
+  color: Colors.black,
+  fontFamily: "Poppins",
+);
 final TextStyle text9 = baseText.copyWith(fontSize: 9);
 final TextStyle text10 = baseText.copyWith(fontSize: 10);
 final TextStyle text11 = baseText.copyWith(fontSize: 11);

@@ -5,7 +5,7 @@ import 'app_font.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData.light().copyWith(
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: const Color(0xFFF6F7F9),
       primaryColor: primaryColor,
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
           shape: CircleBorder(), backgroundColor: primaryColor),
@@ -17,7 +17,8 @@ class AppTheme {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 10),
               foregroundColor: Colors.black45,
-              elevation: 0.5,
+              elevation: 0,
+              shadowColor: Colors.transparent,
               textStyle: text16.copyWith(
                   color: Colors.white, fontWeight: FontWeight.w600),
               backgroundColor: primaryColor)),
@@ -26,8 +27,8 @@ class AppTheme {
       iconTheme: const IconThemeData(color: black, size: 28),
       shadowColor: shadowColor,
       splashFactory: InkRipple.splashFactory,
-      highlightColor: const Color.fromARGB(88, 0, 0, 0),
-      splashColor: const Color.fromARGB(88, 0, 0, 0),
+      highlightColor: splashColor,
+      splashColor: splashColor,
       textSelectionTheme: const TextSelectionThemeData(
           cursorColor: primaryColor,
           selectionColor: Colors.grey,
