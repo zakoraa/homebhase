@@ -11,7 +11,7 @@ import 'package:homebhase/widgets/home/app_bar.dart';
 import 'package:homebhase/widgets/home/bottom_bar.dart';
 import 'package:homebhase/widgets/home/header_box.dart';
 import 'package:homebhase/widgets/home/house_box.dart';
-import 'package:visibility_detector/visibility_detector.dart';
+import 'package:homebhase/widgets/home/popular_today.dart';
 import '../widgets/home/search_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -76,30 +76,7 @@ class HomeView extends StatelessWidget {
                           ),
                         ],
                       )),
-                  GetBuilder<HomeController>(
-                      builder: (_) => ListView.separated(
-                          shrinkWrap: true,
-                          physics: const NeverScrollableScrollPhysics(),
-                          itemCount: 3,
-                          separatorBuilder: (context, index) => const SizedBox(
-                                height: 20,
-                              ),
-                          itemBuilder: (context, index) => VisibilityDetector(
-                              key: Key(index.toString()),
-                              onVisibilityChanged: (visibilityInfo) {
-                                controller.startAnimation(visibilityInfo);
-                              },
-                              child: controller.isItemAnimated[index]
-                                  ? FadeInLeft(
-                                      duration:
-                                          const Duration(milliseconds: 1500),
-                                      child: HouseBox(
-                                        house: controller.popularHouse[index],
-                                      ),
-                                    )
-                                  : const SizedBox(
-                                      height: 100,
-                                    )))),
+                  const PopularToday(),
                   const SizedBox(
                     height: 130,
                   )

@@ -22,6 +22,6 @@ class AppPage {
         name: RouteName.detailHouse,
         page: () => const DetailHouseView(),
         binding: DetailHouseBinding(),
-        transition: Transition.rightToLeft),
+        transition: Transition.rightToLeftWithFade),
   ];
 }

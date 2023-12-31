@@ -58,7 +58,7 @@ class HomeController extends GetxController {
   Future<void> startAnimation(dynamic visibilityInfo) async {
     for (int i = 0; i < popularHouse.length; i++) {
       if (visibilityInfo.visibleFraction == 1 && !isItemAnimated[i]) {
-        await Future.delayed(Duration(milliseconds: i == 0 ? 0 : 1000));
+        await Future.delayed(Duration(milliseconds: i == 0 ? 0 : 800));
         isItemAnimated[i] = true;
       }
       update();
