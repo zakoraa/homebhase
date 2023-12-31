@@ -9,3 +9,4 @@ const Color black = Color(0xFF505050);
 const Color lightGrey = Color.fromARGB(255, 212, 212, 212);
 const Color bgSearch = Color.fromARGB(255, 232, 231, 231);
 final Color greyShimmer = Colors.grey.shade100;
+const Color blackWOpacity0_3 = Color.fromARGB(90, 0, 0, 0);

@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:homebhase/routes/route_name.dart';
 
 import '../../themes/app_color.dart';
 import '../../themes/app_font.dart';
@@ -16,7 +17,7 @@ class HouseBox extends StatelessWidget {
       borderRadius: BorderRadius.circular(20),
       clipBehavior: Clip.hardEdge,
       child: InkWell(
-        onTap: () {},
+        onTap: () => Get.toNamed(RouteName.detailHouse),
         child: Container(
           width: Get.width,
           height: boxHeight,

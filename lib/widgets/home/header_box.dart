@@ -26,7 +26,7 @@ class HomeHeaderBox extends StatelessWidget {
           Container(
             height: Get.height,
             width: Get.width,
-            color: const Color.fromARGB(90, 0, 0, 0),
+            color: blackWOpacity0_3,
           ),
           Padding(
             padding: const EdgeInsets.all(20),

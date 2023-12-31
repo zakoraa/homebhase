@@ -31,7 +31,10 @@ class HomeBottomBar extends StatelessWidget {
                           child: Column(
                             children: [
                               Icon(
-                                controller.tabs.elementAt(index)["icon"],
+                                isSelectedTab
+                                    ? controller.tabs
+                                        .elementAt(index)["icon_active"]
+                                    : controller.tabs.elementAt(index)["icon"],
                                 color:
                                     isSelectedTab ? primaryColor : Colors.grey,
                               ),

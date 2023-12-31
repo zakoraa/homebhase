@@ -37,8 +37,6 @@ class HomeController extends GetxController {
       } else {
         appBarHasColor.value = false;
       }
-      debugPrint("${scrollController.offset}");
-      debugPrint("${appBarHasColor.value}");
       update();
     });
     super.onInit();

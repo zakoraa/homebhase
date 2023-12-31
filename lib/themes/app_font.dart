@@ -16,24 +16,24 @@ final TextStyle text17 = baseText.copyWith(fontSize: 17);
 final TextStyle text18 = baseText.copyWith(fontSize: 18);
 final TextStyle text19 = baseText.copyWith(fontSize: 19);
 final TextStyle text20 =
-    baseText.copyWith(fontSize: 20, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 20, fontWeight: FontWeight.w600);
 final TextStyle text21 =
-    baseText.copyWith(fontSize: 21, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 21, fontWeight: FontWeight.w600);
 final TextStyle text22 =
-    baseText.copyWith(fontSize: 22, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 22, fontWeight: FontWeight.w600);
 final TextStyle text23 =
-    baseText.copyWith(fontSize: 23, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 23, fontWeight: FontWeight.w600);
 final TextStyle text24 =
-    baseText.copyWith(fontSize: 24, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 24, fontWeight: FontWeight.w600);
 final TextStyle text25 =
-    baseText.copyWith(fontSize: 25, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 25, fontWeight: FontWeight.w600);
 final TextStyle text26 =
-    baseText.copyWith(fontSize: 26, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 26, fontWeight: FontWeight.w600);
 final TextStyle text27 =
-    baseText.copyWith(fontSize: 27, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 27, fontWeight: FontWeight.w600);
 final TextStyle text28 =
-    baseText.copyWith(fontSize: 28, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 28, fontWeight: FontWeight.w600);
 final TextStyle text29 =
-    baseText.copyWith(fontSize: 29, fontWeight: FontWeight.bold);
+    baseText.copyWith(fontSize: 29, fontWeight: FontWeight.w600);
 final TextStyle text30 =
     baseText.copyWith(fontSize: 30, fontWeight: FontWeight.w600);
