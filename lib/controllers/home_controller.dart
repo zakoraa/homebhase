@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:homebhase/data/house.dart';
+
+import '../models/house.dart';
 
 class HomeController extends GetxController {
   late final ScrollController scrollController;
   RxInt selectedTab = 0.obs;
   RxBool appBarHasColor = false.obs;
+  RxBool isAnimated = false.obs;
+  List<House> popularHouse = [];
+  List<bool> isItemAnimated = [false, false, false];
   final List<Map<String, dynamic>> tabs = [
     {
       "icon": Icons.home_outlined,
@@ -39,6 +45,7 @@ class HomeController extends GetxController {
       }
       update();
     });
+    _selectPopularHouse();
     super.onInit();
   }
 
@@ -46,6 +53,22 @@ class HomeController extends GetxController {
   void onClose() {
     scrollController.dispose();
     super.onClose();
+  }
+
+  Future<void> startAnimation(dynamic visibilityInfo) async {
+    for (int i = 0; i < popularHouse.length; i++) {
+      if (visibilityInfo.visibleFraction == 1 && !isItemAnimated[i]) {
+        await Future.delayed(Duration(milliseconds: i == 0 ? 0 : 1000));
+        isItemAnimated[i] = true;
+      }
+      update();
+    }
+  }
+
+  void _selectPopularHouse() {
+    houseList.sort((a, b) => b.rating.compareTo(a.rating));
+    popularHouse = houseList.take(3).toList();
+    update();
   }
 
   void selectTab(int index) {

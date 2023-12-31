@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/home_controller.dart';
@@ -17,50 +18,53 @@ class HomeAppBar extends StatelessWidget {
       final int duration = controller.appBarHasColor.value ? 300 : 0;
       return Positioned(
           top: 0,
-          child: Stack(
-            children: [
-              AnimatedOpacity(
-                  duration: Duration(milliseconds: duration),
-                  opacity: opacity,
-                  child: Container(
-                    height: appBarHeight,
-                    width: Get.width,
-                    color: Colors.white,
-                  )),
-              SizedBox(
-                  width: Get.width,
-                  height: appBarHeight,
-                  child: SafeArea(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 15, right: 15, top: 20),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              LabelBrand(),
-                              Icon(
-                                Icons.notifications_outlined,
-                              )
-                            ],
-                          ),
+          child: FadeInDown(
+              duration: const Duration(milliseconds: 2500),
+              child: Stack(
+                children: [
+                  AnimatedOpacity(
+                      duration: Duration(milliseconds: duration),
+                      opacity: opacity,
+                      child: Container(
+                        height: appBarHeight,
+                        width: Get.width,
+                        color: Colors.white,
+                      )),
+                  SizedBox(
+                      width: Get.width,
+                      height: appBarHeight,
+                      child: SafeArea(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Padding(
+                              padding:
+                                  EdgeInsets.only(left: 15, right: 15, top: 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  LabelBrand(),
+                                  Icon(
+                                    Icons.notifications_outlined,
+                                  )
+                                ],
+                              ),
+                            ),
+                            AnimatedOpacity(
+                              duration: Duration(milliseconds: duration),
+                              opacity: opacity,
+                              child: Container(
+                                width: Get.width,
+                                height: 1,
+                                color: lightGrey,
+                              ),
+                            )
+                          ],
                         ),
-                        AnimatedOpacity(
-                          duration: Duration(milliseconds: duration),
-                          opacity: opacity,
-                          child: Container(
-                            width: Get.width,
-                            height: 1,
-                            color: lightGrey,
-                          ),
-                        )
-                      ],
-                    ),
-                  )),
-            ],
-          ));
+                      )),
+                ],
+              )));
     });
   }
 }
