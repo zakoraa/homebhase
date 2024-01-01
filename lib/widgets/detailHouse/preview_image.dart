@@ -40,8 +40,8 @@ class PreviewImage extends StatelessWidget {
                                   duration: const Duration(milliseconds: 1000),
                                   child: Container(
                                     margin: const EdgeInsets.only(top: 10),
-                                    height: 50,
-                                    width: 50,
+                                    height: 60,
+                                    width: 60,
                                     clipBehavior: Clip.hardEdge,
                                     decoration: BoxDecoration(
                                         borderRadius:
@@ -50,8 +50,8 @@ class PreviewImage extends StatelessWidget {
                                       alignment: Alignment.center,
                                       children: [
                                         Container(
-                                          height: 50,
-                                          width: 50,
+                                          height: 60,
+                                          width: 60,
                                           clipBehavior: Clip.hardEdge,
                                           decoration: BoxDecoration(
                                               borderRadius:
@@ -64,8 +64,8 @@ class PreviewImage extends StatelessWidget {
                                           ),
                                         ),
                                         Container(
-                                          height: 50,
-                                          width: 50,
+                                          height: 60,
+                                          width: 60,
                                           color: blackWOpacity0_3,
                                         ),
                                         Text(
@@ -81,8 +81,8 @@ class PreviewImage extends StatelessWidget {
                                   duration: const Duration(milliseconds: 1000),
                                   child: Container(
                                     margin: const EdgeInsets.only(top: 10),
-                                    height: 50,
-                                    width: 50,
+                                    height: 60,
+                                    width: 60,
                                     clipBehavior: Clip.hardEdge,
                                     decoration: BoxDecoration(
                                         borderRadius:
@@ -95,8 +95,8 @@ class PreviewImage extends StatelessWidget {
                                   ),
                                 )
                           : const SizedBox(
-                              height: 60,
-                              width: 50,
+                              height: 70,
+                              width: 60,
                             )),
                 )),
           )

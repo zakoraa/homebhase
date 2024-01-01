@@ -9,7 +9,8 @@ class HomeController extends GetxController {
   House? selectedHouse;
   RxInt selectedTab = 0.obs;
   RxInt oldSelectedTab = 0.obs;
-  RxDouble initialIconSize = 28.0.obs;
+  RxInt selectedIndex = 0.obs;
+  RxDouble initialIconSize = 25.0.obs;
   RxDouble initialTextSize = 10.0.obs;
   RxDouble iconSize = 28.0.obs;
   RxDouble textSize = 10.0.obs;
@@ -19,23 +20,23 @@ class HomeController extends GetxController {
   List<bool> isItemAnimated = [];
   final List<Map<String, dynamic>> tabs = [
     {
-      "icon": Icons.home_outlined,
-      "icon_active": Icons.home_rounded,
+      "icon": "assets/home_outlined.svg",
+      "icon_active": "assets/home.svg",
       "name": "Home"
     },
     {
-      "icon": Icons.favorite_outline_rounded,
-      "icon_active": Icons.favorite_rounded,
+      "icon": "assets/favorite_outlined.svg",
+      "icon_active": "assets/favorite.svg",
       "name": "Favorite"
     },
     {
-      "icon": Icons.settings_outlined,
-      "icon_active": Icons.settings_rounded,
+      "icon": "assets/settings_outlined.svg",
+      "icon_active": "assets/settings.svg",
       "name": "Settings"
     },
     {
-      "icon": Icons.person_outlined,
-      "icon_active": Icons.person_rounded,
+      "icon": "assets/profile_outlined.svg",
+      "icon_active": "assets/profile.svg",
       "name": "Profile"
     },
   ];
@@ -55,14 +56,12 @@ class HomeController extends GetxController {
     for (int i = 0; i < popularHouse.length; i++) {
       isItemAnimated.add(false);
     }
-
     super.onInit();
   }
 
   @override
   void onClose() {
     scrollController.dispose();
-
     super.onClose();
   }
 

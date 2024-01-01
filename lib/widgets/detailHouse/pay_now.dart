@@ -41,7 +41,7 @@ class PayNow extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
-                        padding: const EdgeInsets.symmetric(horizontal: 20)),
+                        padding: const EdgeInsets.symmetric(horizontal: 30)),
                     child: Text(
                       "Pay now",
                       style: text14.copyWith(color: Colors.white),

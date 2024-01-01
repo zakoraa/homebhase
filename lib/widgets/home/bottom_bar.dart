@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/home_controller.dart';
 import 'package:homebhase/themes/app_color.dart';
@@ -35,7 +36,7 @@ class HomeBottomBar extends StatelessWidget {
                               controller.update();
                             },
                             onTapDown: (details) {
-                              controller.iconSize.value = 25;
+                              controller.iconSize.value = 23;
                               controller.textSize.value = 8;
                               controller.selectTab(index);
                               controller.update();
@@ -52,26 +53,31 @@ class HomeBottomBar extends StatelessWidget {
                               color: Colors.white,
                               padding: const EdgeInsets.symmetric(vertical: 10),
                               child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    isSelectedTab
-                                        ? controller.tabs
-                                            .elementAt(index)["icon_active"]
-                                        : controller.tabs
-                                            .elementAt(index)["icon"],
-                                    color: isSelectedTab
-                                        ? primaryColor
-                                        : Colors.grey,
-                                    size: isSelectedTab
-                                        ? controller.iconSize.value
-                                        : controller.initialIconSize.value,
-                                  ),
+                                  SvgPicture.asset(
+                                      isSelectedTab
+                                          ? controller.tabs
+                                              .elementAt(index)["icon_active"]
+                                          : controller.tabs
+                                              .elementAt(index)["icon"],
+                                      height: isSelectedTab
+                                          ? controller.iconSize.value
+                                          : controller.initialIconSize.value,
+                                      width: isSelectedTab
+                                          ? controller.iconSize.value
+                                          : controller.initialIconSize.value,
+                                      semanticsLabel: controller.tabs
+                                          .elementAt(index)["name"]),
                                   const SizedBox(
                                     height: 3,
                                   ),
                                   Text(
                                     controller.tabs.elementAt(index)["name"],
                                     style: TextStyle(
+                                        fontWeight: isSelectedTab
+                                            ? FontWeight.w600
+                                            : FontWeight.normal,
                                         fontSize: isSelectedTab
                                             ? controller.textSize.value
                                             : controller.initialTextSize.value,

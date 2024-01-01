@@ -49,7 +49,7 @@ class DetailHouseContent extends StatelessWidget {
               children: [
                 Text(
                   house.name,
-                  style: text20,
+                  style: text22,
                 ),
                 const Icon(Icons.favorite_outline_rounded)
               ],
@@ -59,18 +59,18 @@ class DetailHouseContent extends StatelessWidget {
             height: 25,
           ),
           FadeInUp(
-            duration: const Duration(milliseconds: 1600),
+            duration: const Duration(milliseconds: 1400),
             child: Text("Description",
-                style: text14.copyWith(fontWeight: FontWeight.w600)),
+                style: text18.copyWith(fontWeight: FontWeight.w600)),
           ),
           const SizedBox(
             height: 10,
           ),
           GetBuilder<DetailHouseController>(
             builder: (_) => FadeInUp(
-              duration: const Duration(milliseconds: 2000),
+              duration: const Duration(milliseconds: 1800),
               child: RichText(
-                text: TextSpan(style: text12, children: [
+                text: TextSpan(style: text13, children: [
                   TextSpan(text: controller.getDescriptionSnippet()),
                   const WidgetSpan(
                       child: SizedBox(
@@ -84,7 +84,7 @@ class DetailHouseContent extends StatelessWidget {
                     },
                     child: Text(
                       controller.isFullText.value ? "less" : "more",
-                      style: text12.copyWith(color: primaryColor),
+                      style: text14.copyWith(color: primaryColor),
                     ),
                   ))
                 ]),
