@@ -30,13 +30,10 @@ class AppTheme {
       highlightColor: splashColor,
       splashColor: splashColor,
       textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: primaryColor,
+          cursorColor: Colors.black,
           selectionColor: Colors.grey,
-          selectionHandleColor: primaryColor),
+          selectionHandleColor: Colors.black),
       inputDecorationTheme: InputDecorationTheme(
-          counterStyle: text10,
-          helperStyle: text10.copyWith(
-              color: Colors.red, overflow: TextOverflow.visible),
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           enabledBorder: OutlineInputBorder(
@@ -45,6 +42,6 @@ class AppTheme {
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10),
               borderSide: const BorderSide(width: 1, color: primaryColor)),
-          hintStyle: text14.copyWith(
+          hintStyle: text12.copyWith(
               color: const Color.fromARGB(255, 144, 143, 143))));
 }

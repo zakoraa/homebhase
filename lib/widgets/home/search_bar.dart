@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:homebhase/routes/route_name.dart';
 
 import '../../themes/app_font.dart';
 
@@ -14,7 +15,7 @@ class HomeSearchBar extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       color: Colors.white,
       child: InkWell(
-        onTap: () {},
+        onTap: () => Get.toNamed(RouteName.search),
         child: Container(
           width: Get.width,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
