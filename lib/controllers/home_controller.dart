@@ -6,7 +6,6 @@ import '../models/house.dart';
 
 class HomeController extends GetxController {
   late final ScrollController scrollController;
-  House? selectedHouse;
   RxInt selectedTab = 0.obs;
   RxInt oldSelectedTab = 0.obs;
   RxInt selectedIndex = 0.obs;

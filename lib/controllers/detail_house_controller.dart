@@ -1,14 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:homebhase/controllers/home_controller.dart';
-import 'package:homebhase/themes/app_color.dart';
+import "package:flutter/material.dart";
+import "package:get/get.dart";
+import "package:homebhase/controllers/home_controller.dart";
+import "package:homebhase/themes/app_color.dart";
 
-import '../models/house.dart';
+import "../models/house.dart";
 
 class DetailHouseController extends GetxController {
   final homeController = Get.find<HomeController>();
   late final ScrollController scrollController;
   late final House selectedHouse;
+  late final Map<String, dynamic> args;
   final RxDouble previewImageHeight = 350.0.obs;
   RxBool appBarHasColor = false.obs;
   RxBool isFullText = false.obs;
@@ -27,12 +28,10 @@ class DetailHouseController extends GetxController {
       }
       update();
     });
-    selectedHouse = homeController.selectedHouse!;
+    _selectArgument();
     _handleRatingStar();
     _ratingStarAnimation();
     _startAnimation();
-    debugPrint("${selectedHouse.imagePreview}");
-    debugPrint(selectedHouse.thumbnail);
     super.onInit();
   }
 
@@ -40,6 +39,11 @@ class DetailHouseController extends GetxController {
   void onClose() {
     scrollController.dispose();
     super.onClose();
+  }
+
+  void _selectArgument() {
+    args = Get.arguments;
+    selectedHouse = args["house"];
   }
 
   Future<void> _startAnimation() async {

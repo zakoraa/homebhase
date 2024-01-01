@@ -1,6 +1,6 @@
 import '../models/house.dart';
 
-List<House> houseList = [
+List<House> houseDataList = [
   House(
       name: "123 Junilun Zahra",
       description:
@@ -99,3 +99,5 @@ List<House> houseList = [
         "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
       ]),
 ];
+
+List<House> houseList = List.from(houseDataList);
