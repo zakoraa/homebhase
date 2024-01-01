@@ -8,6 +8,11 @@ class HomeController extends GetxController {
   late final ScrollController scrollController;
   House? selectedHouse;
   RxInt selectedTab = 0.obs;
+  RxInt oldSelectedTab = 0.obs;
+  RxDouble initialIconSize = 28.0.obs;
+  RxDouble initialTextSize = 10.0.obs;
+  RxDouble iconSize = 28.0.obs;
+  RxDouble textSize = 10.0.obs;
   RxBool appBarHasColor = false.obs;
   RxBool isAnimated = false.obs;
   List<House> popularHouse = [];
@@ -50,12 +55,14 @@ class HomeController extends GetxController {
     for (int i = 0; i < popularHouse.length; i++) {
       isItemAnimated.add(false);
     }
+
     super.onInit();
   }
 
   @override
   void onClose() {
     scrollController.dispose();
+
     super.onClose();
   }
 
@@ -76,6 +83,7 @@ class HomeController extends GetxController {
   }
 
   void selectTab(int index) {
+    oldSelectedTab.value = selectedTab.value;
     selectedTab.value = index;
     update();
   }

@@ -31,6 +31,8 @@ class DetailHouseController extends GetxController {
     _handleRatingStar();
     _ratingStarAnimation();
     _startAnimation();
+    debugPrint("${selectedHouse.imagePreview}");
+    debugPrint(selectedHouse.thumbnail);
     super.onInit();
   }
 

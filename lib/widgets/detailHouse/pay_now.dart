@@ -15,7 +15,7 @@ class PayNow extends StatelessWidget {
     return Positioned(
         bottom: 0,
         child: FadeInUp(
-          duration: const Duration(milliseconds: 2000),
+          duration: const Duration(milliseconds: 2300),
           child: Container(
             width: Get.width,
             padding: const EdgeInsets.all(20),

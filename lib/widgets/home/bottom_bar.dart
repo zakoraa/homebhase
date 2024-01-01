@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/home_controller.dart';
 import 'package:homebhase/themes/app_color.dart';
-import 'package:homebhase/themes/app_font.dart';
 
 class HomeBottomBar extends StatelessWidget {
   const HomeBottomBar({super.key});
@@ -17,6 +16,7 @@ class HomeBottomBar extends StatelessWidget {
       child: FadeInUp(
           duration: const Duration(milliseconds: 2500),
           child: Container(
+              height: 65,
               color: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 5),
               child: GetBuilder<HomeController>(
@@ -27,7 +27,26 @@ class HomeBottomBar extends StatelessWidget {
                           final bool isSelectedTab =
                               controller.selectedTab.value == index;
                           return GestureDetector(
-                            onTap: () => controller.selectTab(index),
+                            onTapUp: (details) {
+                              controller.iconSize.value =
+                                  controller.initialIconSize.value;
+                              controller.textSize.value =
+                                  controller.initialTextSize.value;
+                              controller.update();
+                            },
+                            onTapDown: (details) {
+                              controller.iconSize.value = 25;
+                              controller.textSize.value = 8;
+                              controller.selectTab(index);
+                              controller.update();
+                            },
+                            onTapCancel: () {
+                              controller.iconSize.value =
+                                  controller.initialIconSize.value;
+                              controller.textSize.value =
+                                  controller.initialTextSize.value;
+                              controller.update();
+                            },
                             child: Container(
                               width: Get.width / 4 - 3,
                               color: Colors.white,
@@ -43,13 +62,19 @@ class HomeBottomBar extends StatelessWidget {
                                     color: isSelectedTab
                                         ? primaryColor
                                         : Colors.grey,
+                                    size: isSelectedTab
+                                        ? controller.iconSize.value
+                                        : controller.initialIconSize.value,
                                   ),
                                   const SizedBox(
                                     height: 3,
                                   ),
                                   Text(
                                     controller.tabs.elementAt(index)["name"],
-                                    style: text10.copyWith(
+                                    style: TextStyle(
+                                        fontSize: isSelectedTab
+                                            ? controller.textSize.value
+                                            : controller.initialTextSize.value,
                                         color: isSelectedTab
                                             ? primaryColor
                                             : Colors.grey),
