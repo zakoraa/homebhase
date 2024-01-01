@@ -21,7 +21,7 @@ List<House> houseList = [
       name: "123 Jolte Zahro",
       description:
           "123 Jolte Zahro stands as an embodiment of contemporary elegance and serene comfort. Nestled within a charming locale, this residence exudes a unique blend of modern architectural finesse and inviting warmth. As you step inside, natural light cascades through expansive windows, illuminating the carefully curated spaces that seamlessly marry functionality with style. The interior design exudes sophistication, showcasing a harmonious fusion of sleek lines, refined textures, and thoughtful accents. From the meticulously crafted living areas to the inviting bedrooms and well-appointed amenities, each corner of this home offers a haven of tranquility and refined living, inviting you to embrace a lifestyle of unparalleled comfort and luxury.",
-      rating: 4.0,
+      rating: 3.2,
       price: 400,
       roomMeet: 2,
       thumbnail:
@@ -66,7 +66,7 @@ List<House> houseList = [
       name: "Best Z",
       description:
           "Best Z stands tall as the pinnacle of luxurious living and architectural ingenuity. This exceptional residence redefines opulence, boasting a facade that commands attention and admiration in its prestigious locale. Upon entry, a world of refined extravagance unfolds, showcasing impeccably designed interiors that blend modern sophistication with timeless allure. From its grand living spaces adorned with exquisite finishes to the lavish amenities and meticulously curated details, every corner of Best Z exudes an unmatched sense of luxury and prestige. It's not just a home; it's a statement of unparalleled elegance, offering its residents a lifestyle of absolute splendor and exclusivity amidst an environment that embodies the epitome of architectural brilliance.",
-      rating: 4.0,
+      rating: 3.4,
       price: 450,
       roomMeet: 3,
       thumbnail:
@@ -79,5 +79,23 @@ List<House> houseList = [
         "https://images.surferseo.art/fdb08e2e-5d39-402c-ad0c-8a3293301d9e.png",
         "https://images.surferseo.art/fdb08e2e-5d39-402c-ad0c-8a3293301d9e.png",
         "https://images.surferseo.art/fdb08e2e-5d39-402c-ad0c-8a3293301d9e.png",
+      ]),
+  House(
+      name: "Your House",
+      description:
+          "Your House stands tall as the pinnacle of luxurious living and architectural ingenuity. This exceptional residence redefines opulence, boasting a facade that commands attention and admiration in its prestigious locale. Upon entry, a world of refined extravagance unfolds, showcasing impeccably designed interiors that blend modern sophistication with timeless allure. From its grand living spaces adorned with exquisite finishes to the lavish amenities and meticulously curated details, every corner of Best Z exudes an unmatched sense of luxury and prestige. It's not just a home; it's a statement of unparalleled elegance, offering its residents a lifestyle of absolute splendor and exclusivity amidst an environment that embodies the epitome of architectural brilliance.",
+      rating: 3.0,
+      price: 250,
+      roomMeet: 2,
+      thumbnail:
+          "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+      imagePreview: [
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
+        "https://preferredhomes.com.au/wp-content/uploads/2019/02/Modern-House-Feature.jpg",
       ]),
 ];

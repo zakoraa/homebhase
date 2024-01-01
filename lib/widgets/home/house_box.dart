@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:get/get.dart';
+import 'package:homebhase/controllers/home_controller.dart';
 import 'package:homebhase/models/house.dart';
 import 'package:homebhase/routes/route_name.dart';
 
@@ -15,6 +16,7 @@ class HouseBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.find<HomeController>();
     const double boxHeight = 200;
     return Container(
       clipBehavior: Clip.hardEdge,
@@ -122,7 +124,10 @@ class HouseBox extends StatelessWidget {
               child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                      onTap: () => Get.toNamed(RouteName.detailHouse),
+                      onTap: () {
+                        controller.selectedHouse = house;
+                        Get.toNamed(RouteName.detailHouse);
+                      },
                       child: Container(
                         color: Colors.transparent,
                       ))))

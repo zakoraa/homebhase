@@ -6,11 +6,12 @@ import '../models/house.dart';
 
 class HomeController extends GetxController {
   late final ScrollController scrollController;
+  House? selectedHouse;
   RxInt selectedTab = 0.obs;
   RxBool appBarHasColor = false.obs;
   RxBool isAnimated = false.obs;
   List<House> popularHouse = [];
-  List<bool> isItemAnimated = [false, false, false];
+  List<bool> isItemAnimated = [];
   final List<Map<String, dynamic>> tabs = [
     {
       "icon": Icons.home_outlined,
@@ -46,6 +47,9 @@ class HomeController extends GetxController {
       update();
     });
     _selectPopularHouse();
+    for (int i = 0; i < popularHouse.length; i++) {
+      isItemAnimated.add(false);
+    }
     super.onInit();
   }
 
