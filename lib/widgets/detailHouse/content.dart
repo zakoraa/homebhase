@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/detail_house_controller.dart';
 import 'package:homebhase/themes/app_color.dart';
@@ -42,53 +43,58 @@ class DetailHouseContent extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          FadeInUp(
-            duration: const Duration(milliseconds: 1200),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  house.name,
-                  style: text22,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                house.name,
+                style: text22,
+              ),
+              GetBuilder<DetailHouseController>(
+                builder: (_) => GestureDetector(
+                  onTap: () {
+                    controller.isLiked.toggle();
+                    controller.update();
+                  },
+                  child: SvgPicture.asset(
+                      controller.isLiked.value
+                          ? "assets/favorite.svg"
+                          : "assets/favorite_outlined.svg",
+                      height: 28,
+                      width: 28,
+                      semanticsLabel: 'favorite_house'),
                 ),
-                const Icon(Icons.favorite_outline_rounded)
-              ],
-            ),
+              )
+            ],
           ),
           const SizedBox(
             height: 25,
           ),
-          FadeInUp(
-            duration: const Duration(milliseconds: 1400),
-            child: Text("Description",
-                style: text18.copyWith(fontWeight: FontWeight.w600)),
-          ),
+          Text("Description",
+              style: text18.copyWith(fontWeight: FontWeight.w600)),
           const SizedBox(
             height: 10,
           ),
           GetBuilder<DetailHouseController>(
-            builder: (_) => FadeInUp(
-              duration: const Duration(milliseconds: 1800),
-              child: RichText(
-                text: TextSpan(style: text13, children: [
-                  TextSpan(text: controller.getDescriptionSnippet()),
-                  const WidgetSpan(
-                      child: SizedBox(
-                    width: 3,
-                  )),
-                  WidgetSpan(
-                      child: GestureDetector(
-                    onTap: () {
-                      controller.isFullText.toggle();
-                      controller.update();
-                    },
-                    child: Text(
-                      controller.isFullText.value ? "less" : "more",
-                      style: text14.copyWith(color: primaryColor),
-                    ),
-                  ))
-                ]),
-              ),
+            builder: (_) => RichText(
+              text: TextSpan(style: text13, children: [
+                TextSpan(text: controller.getDescriptionSnippet()),
+                const WidgetSpan(
+                    child: SizedBox(
+                  width: 3,
+                )),
+                WidgetSpan(
+                    child: GestureDetector(
+                  onTap: () {
+                    controller.isFullText.toggle();
+                    controller.update();
+                  },
+                  child: Text(
+                    controller.isFullText.value ? "less" : "more",
+                    style: text14.copyWith(color: primaryColor),
+                  ),
+                ))
+              ]),
             ),
           ),
           const SizedBox(

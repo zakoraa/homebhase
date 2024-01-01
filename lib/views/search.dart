@@ -34,7 +34,7 @@ class SearchView extends StatelessWidget {
                         children: [
                           Text(
                             "Recommended",
-                            style: text20,
+                            style: text18.copyWith(fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(
                             height: 20,

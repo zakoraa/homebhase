@@ -18,6 +18,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<HomeController>();
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Stack(
         children: [
           SingleChildScrollView(

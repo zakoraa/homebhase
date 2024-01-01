@@ -76,7 +76,7 @@ class HomeController extends GetxController {
 
   void _selectPopularHouse() {
     houseList.sort((a, b) => b.rating.compareTo(a.rating));
-    popularHouse = houseList.take(3).toList();
+    popularHouse = List.from(houseList.take(3).toList());
     update();
   }
 

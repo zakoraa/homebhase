@@ -24,7 +24,7 @@ class AppTheme {
               backgroundColor: primaryColor)),
       textTheme: TextTheme(
           headlineLarge: text18, bodyLarge: text18, bodyMedium: text14),
-      iconTheme: const IconThemeData(color: black, size: 28),
+      iconTheme: const IconThemeData(color: Colors.black, size: 28),
       shadowColor: shadowColor,
       splashFactory: InkRipple.splashFactory,
       highlightColor: splashColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/home_controller.dart';
 import 'package:homebhase/themes/app_color.dart';
@@ -34,17 +35,17 @@ class HomeAppBar extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Padding(
-                          padding:
-                              EdgeInsets.only(left: 15, right: 15, top: 20),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                              left: 15, right: 15, top: 20),
                           child: Row(
-                            mainAxisAlignment:
-                                MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              LabelBrand(),
-                              Icon(
-                                Icons.notifications_outlined,
-                              )
+                              const LabelBrand(),
+                              SvgPicture.asset("assets/notification.svg",
+                                  height: 23,
+                                  width: 23,
+                                  semanticsLabel: 'notification_home'),
                             ],
                           ),
                         ),

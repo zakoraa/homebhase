@@ -13,6 +13,8 @@ class DetailHouseController extends GetxController {
   final RxDouble previewImageHeight = 350.0.obs;
   RxBool appBarHasColor = false.obs;
   RxBool isFullText = false.obs;
+  RxBool isLiked = false.obs;
+  RxInt selectedIPreviewImage = 0.obs;
   Map<String, List<dynamic>> stars = {};
   List<bool> isItemAnimated = [];
   List<bool> isStarAnimated = [];

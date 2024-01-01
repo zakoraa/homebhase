@@ -11,7 +11,7 @@ List<House> houseDataList = [
       thumbnail:
           "https://i0.wp.com/jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-House-Cedar-Accents_03.jpg?resize=1024%2C683&ssl=1",
       imagePreview: [
-        "https://jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-House_04.jpg",
+        "https://i0.wp.com/jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-Barn-House_02.jpg?resize=1024%2C683&ssl=1",
         "https://i0.wp.com/jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-Barn-House_02.jpg?resize=1024%2C683&ssl=1",
         "https://i0.wp.com/jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-Barn-House_01.jpg?resize=1024%2C683&ssl=1",
         "https://i0.wp.com/jewkesdesign.com/wp-content/uploads/2023/04/Jewkes-Design_Black-Modern-Barn-House_01.jpg?resize=1024%2C683&ssl=1",
