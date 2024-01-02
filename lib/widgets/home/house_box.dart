@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:get/get.dart';
+import 'package:homebhase/data/house.dart';
 import 'package:homebhase/models/house.dart';
 import 'package:homebhase/routes/route_name.dart';
 
@@ -28,7 +29,7 @@ class HouseBox extends StatelessWidget {
         children: [
           Positioned.fill(
             child: BlurHash(
-              hash: "LiDAfcogW?t7Xrj]bIaeIrfkoIWB",
+              hash: blurHashImage,
               image: house.thumbnail,
               imageFit: BoxFit.cover,
             ),

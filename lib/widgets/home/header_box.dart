@@ -20,7 +20,7 @@ class HomeHeaderBox extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/header_home.jpg",
+            "assets/images/header_home.jpg",
             fit: BoxFit.cover,
           ),
           Container(

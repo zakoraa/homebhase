@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/detail_house_controller.dart';
+import 'package:homebhase/data/house.dart';
 import 'package:homebhase/widgets/detailHouse/detail_preview_image.dart';
 
 import '../../themes/app_color.dart';
@@ -23,7 +24,7 @@ class PreviewImage extends StatelessWidget {
         children: [
           Positioned.fill(
             child: BlurHash(
-              hash: "LiDAfcogW?t7Xrj]bIaeIrfkoIWB",
+              hash: blurHashImage,
               image: house.thumbnail,
               imageFit: BoxFit.cover,
             ),
@@ -36,7 +37,7 @@ class PreviewImage extends StatelessWidget {
                   children: List.generate(
                       3,
                       (index) => controller.isItemAnimated[index]
-                          ? index == 2 && house.imagePreview.length > 2
+                          ? index == 2 && house.imagePreview.length > 3
                               ? FadeInRight(
                                   duration: const Duration(milliseconds: 1000),
                                   child: GestureDetector(
@@ -64,8 +65,7 @@ class PreviewImage extends StatelessWidget {
                                                 borderRadius:
                                                     BorderRadius.circular(10)),
                                             child: BlurHash(
-                                              hash:
-                                                  "LiDAfcogW?t7Xrj]bIaeIrfkoIWB",
+                                              hash: blurHashImage,
                                               image: house.imagePreview[index],
                                               imageFit: BoxFit.cover,
                                             ),
@@ -101,7 +101,7 @@ class PreviewImage extends StatelessWidget {
                                           borderRadius:
                                               BorderRadius.circular(10)),
                                       child: BlurHash(
-                                        hash: "LiDAfcogW?t7Xrj]bIaeIrfkoIWB",
+                                        hash: blurHashImage,
                                         image: house.imagePreview[index],
                                         imageFit: BoxFit.cover,
                                       ),

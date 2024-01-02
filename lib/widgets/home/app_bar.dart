@@ -42,7 +42,7 @@ class HomeAppBar extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const LabelBrand(),
-                              SvgPicture.asset("assets/notification.svg",
+                              SvgPicture.asset("assets/svg/notification.svg",
                                   height: 23,
                                   width: 23,
                                   semanticsLabel: 'notification_home'),

@@ -19,23 +19,23 @@ class HomeController extends GetxController {
   List<bool> isItemAnimated = [];
   final List<Map<String, dynamic>> tabs = [
     {
-      "icon": "assets/home_outlined.svg",
-      "icon_active": "assets/home.svg",
+      "icon": "assets/svg/home_outlined.svg",
+      "icon_active": "assets/svg/home.svg",
       "name": "Home"
     },
     {
-      "icon": "assets/favorite_outlined.svg",
-      "icon_active": "assets/favorite.svg",
+      "icon": "assets/svg/favorite_outlined.svg",
+      "icon_active": "assets/svg/favorite.svg",
       "name": "Favorite"
     },
     {
-      "icon": "assets/settings_outlined.svg",
-      "icon_active": "assets/settings.svg",
+      "icon": "assets/svg/settings_outlined.svg",
+      "icon_active": "assets/svg/settings.svg",
       "name": "Settings"
     },
     {
-      "icon": "assets/profile_outlined.svg",
-      "icon_active": "assets/profile.svg",
+      "icon": "assets/svg/profile_outlined.svg",
+      "icon_active": "assets/svg/profile.svg",
       "name": "Profile"
     },
   ];

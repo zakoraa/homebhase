@@ -32,7 +32,7 @@ class SearchViewController extends GetxController {
       isItemAnimated.add(false);
     }
     for (int i = 0; i < recommendedHouseList.length; i++) {
-      await Future.delayed(Duration(milliseconds: i == 0 ? 0 : 800));
+      await Future.delayed(Duration(milliseconds: i == 0 ? 0 : 600));
       isItemAnimated[i] = true;
       update();
     }

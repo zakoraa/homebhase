@@ -58,8 +58,8 @@ class DetailHouseContent extends StatelessWidget {
                   },
                   child: SvgPicture.asset(
                       controller.isLiked.value
-                          ? "assets/favorite.svg"
-                          : "assets/favorite_outlined.svg",
+                          ? "assets/svg/favorite.svg"
+                          : "assets/svg/favorite_outlined.svg",
                       height: 28,
                       width: 28,
                       semanticsLabel: 'favorite_house'),

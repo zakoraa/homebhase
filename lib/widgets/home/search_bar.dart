@@ -26,7 +26,7 @@ class HomeSearchBar extends StatelessWidget {
                 "Search Here...",
                 style: text14.copyWith(color: Colors.grey),
               ),
-              SvgPicture.asset("assets/search.svg",
+              SvgPicture.asset("assets/svg/search.svg",
                   colorFilter:
                       const ColorFilter.mode(Colors.grey, BlendMode.srcIn),
                   semanticsLabel: 'Search')

@@ -1,6 +1,8 @@
 import '../models/house.dart';
 
-List<House> houseDataList = [
+const String blurHashImage = "LiDAfcogW?t7Xrj]bIaeIrfkoIWB";
+
+final List<House> houseDataList = [
   House(
       name: "123 Junilun Zahra",
       description:
@@ -100,4 +102,4 @@ List<House> houseDataList = [
       ]),
 ];
 
-List<House> houseList = List.from(houseDataList);
+final List<House> houseList = List.from(houseDataList);

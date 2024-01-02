@@ -34,11 +34,9 @@ class CarouselHouseBox extends StatelessWidget {
             items: houseList.map<Widget>((house) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: GestureDetector(
-                    onTap: () {},
-                    child: HouseBox(
-                      house: house,
-                    )),
+                child: HouseBox(
+                  house: house,
+                ),
               );
             }).toList(),
           ),

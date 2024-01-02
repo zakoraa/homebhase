@@ -109,7 +109,7 @@ class FirstView extends StatelessWidget {
                 child: SizedBox(
                     width: Get.width,
                     child: Image.asset(
-                      "assets/modern_house.png",
+                      "assets/images/modern_house.png",
                       fit: BoxFit.cover,
                     ))),
           ],

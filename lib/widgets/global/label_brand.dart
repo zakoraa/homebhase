@@ -12,7 +12,7 @@ class LabelBrand extends StatelessWidget {
       text: TextSpan(style: text20, children: [
         WidgetSpan(
             child: Image.asset(
-          "assets/home.png",
+          "assets/images/home.png",
           height: 27,
         )),
         const WidgetSpan(
