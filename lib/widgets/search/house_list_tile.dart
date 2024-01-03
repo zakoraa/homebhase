@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/models/house.dart';
+import 'package:homebhase/widgets/global/house_image.dart';
 
 import '../../controllers/search_controller.dart';
 import '../../routes/route_name.dart';
@@ -28,14 +28,9 @@ class HouseListTile extends StatelessWidget {
         Row(
           children: [
             SizedBox(
-              height: 130,
-              width: 130,
-              child: BlurHash(
-                hash: "LiDAfcogW?t7Xrj]bIaeIrfkoIWB",
-                image: house.thumbnail,
-                imageFit: BoxFit.cover,
-              ),
-            ),
+                height: 130,
+                width: 130,
+                child: HouseImage(image: house.thumbnail)),
             const SizedBox(
               width: 10,
             ),

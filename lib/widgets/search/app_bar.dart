@@ -78,7 +78,7 @@ class SearchAppBar extends StatelessWidget {
                               prefixIcon: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 15.0, right: 10),
-                                child: SvgPicture.asset("assets/search.svg",
+                                child: SvgPicture.asset("assets/svg/search.svg",
                                     colorFilter: const ColorFilter.mode(
                                         Colors.grey, BlendMode.srcIn),
                                     semanticsLabel: 'Search'),

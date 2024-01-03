@@ -1,11 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 import 'package:get/get.dart';
-import 'package:homebhase/data/house.dart';
 import 'package:homebhase/models/house.dart';
 import 'package:homebhase/routes/route_name.dart';
+import 'package:homebhase/widgets/global/house_image.dart';
 
 import '../../themes/app_color.dart';
 import '../../themes/app_font.dart';
@@ -27,13 +26,7 @@ class HouseBox extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Positioned.fill(
-            child: BlurHash(
-              hash: blurHashImage,
-              image: house.thumbnail,
-              imageFit: BoxFit.cover,
-            ),
-          ),
+          HouseImage(image: house.thumbnail),
           Positioned(
             bottom: 0,
             width: Get.width - 30,
