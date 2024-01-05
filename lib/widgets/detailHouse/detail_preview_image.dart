@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:homebhase/controllers/detail_house_controller.dart';
 import '../../models/house.dart';
+import '../../themes/app_font.dart';
 
 class DetailPreviewImage extends StatelessWidget {
   final House house;
@@ -58,12 +59,25 @@ class DetailPreviewImage extends StatelessWidget {
                         ),
                         items: house.imagePreview.map<Widget>((image) {
                           return SizedBox(
-                            width: Get.width,
-                            child: Image.network(
-                              image,
-                              fit: BoxFit.fitWidth,
-                            ),
-                          );
+                              width: Get.width,
+                              child: Image.network(
+                                image,
+                                fit: BoxFit.fitWidth,
+                                errorBuilder: (context, error, stackTrace) {
+                                  return Container(
+                                    height: Get.height,
+                                    width: Get.width,
+                                    color:
+                                        const Color.fromARGB(255, 22, 22, 22),
+                                    child: Center(
+                                        child: Text(
+                                      "Failed to load image",
+                                      style:
+                                          text11.copyWith(color: Colors.white),
+                                    )),
+                                  );
+                                },
+                              ));
                         }).toList(),
                       ),
                     ],

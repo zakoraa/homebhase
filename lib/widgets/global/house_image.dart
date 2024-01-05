@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:homebhase/themes/app_font.dart';
 
 class HouseImage extends StatelessWidget {
   final String image;
@@ -17,10 +19,28 @@ class HouseImage extends StatelessWidget {
         fit: BoxFit.cover,
         placeholderScale: 0.5,
         imageErrorBuilder: (context, error, stackTrace) {
-          return const Text("Failed to load image");
+          return Container(
+            height: Get.height,
+            width: Get.width,
+            color: Colors.black,
+            child: Center(
+                child: Text(
+              "Failed to load image",
+              style: text11.copyWith(color: Colors.grey),
+            )),
+          );
         },
         placeholderErrorBuilder: (context, error, stackTrace) {
-          return const Text("Failed to load image");
+          return Container(
+            height: Get.height,
+            width: Get.width,
+            color: Colors.black,
+            child: Center(
+                child: Text(
+              "Failed to load image",
+              style: text11.copyWith(color: Colors.grey),
+            )),
+          );
         },
       ),
     ]);
